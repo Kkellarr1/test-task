@@ -21,4 +21,8 @@ dependencyResolutionManagement {
 
 rootProject.name = "TestForWork"
 include(":app")
+include(":domain")
+include(":data")
+include(":presentation")
+include(":core")
  

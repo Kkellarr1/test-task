@@ -2,14 +2,11 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
-    id("kotlin-parcelize")
 }
 
 android {
     namespace = "com.example.testforwork"
-    compileSdk {
-        version = release(36)
-    }
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.example.testforwork"
@@ -43,9 +40,18 @@ android {
 }
 
 dependencies {
+    // Модули проекта
+    implementation(project(":domain"))
+    implementation(project(":data"))
+    implementation(project(":presentation"))
+    implementation(project(":core"))
+    
+    // AndroidX
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
+    
+    // Compose
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.compose.ui)
     implementation(libs.androidx.compose.ui.graphics)
@@ -54,24 +60,6 @@ dependencies {
     
     // Navigation
     implementation(libs.navigation.compose)
-    
-    // ViewModel
-    implementation(libs.lifecycle.viewmodel.compose)
-    
-    // Networking
-    implementation(libs.retrofit)
-    implementation(libs.retrofit.gson)
-    implementation(libs.okhttp)
-    implementation(libs.okhttp.logging)
-    implementation(libs.gson)
-    
-    // Maps - Google Maps
-    implementation(libs.maps.compose)
-    implementation(libs.play.services.maps)
-    implementation(libs.play.services.location)
-    
-    // WorkManager for background tasks
-    implementation(libs.work.runtime.ktx)
     
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

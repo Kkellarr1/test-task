@@ -4,11 +4,13 @@
 
 ## Архитектура
 
-Приложение построено по принципам **Clean Architecture** и **MVVM**:
+Приложение построено по принципам **Clean Architecture** и **MVVM** с модульной структурой:
 
-- **Domain** - бизнес-логика, entities, use cases
-- **Data** - источники данных, репозитории, API
-- **Presentation** - UI, ViewModels, навигация
+- **Domain** - бизнес-логика, entities, use cases, repository interfaces
+- **Data** - источники данных, репозитории, API, DTOs
+- **Presentation** - UI, ViewModels, навигация, экраны
+- **Core** - общие компоненты (сервисы)
+- **App** - точка входа, DI, тема
 
 ## Технологии
 

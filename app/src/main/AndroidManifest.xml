@@ -38,7 +38,7 @@
         </activity>
         
         <service
-            android:name=".service.TrainingForegroundService"
+            android:name="com.example.testforwork.core.service.TrainingForegroundService"
             android:enabled="true"
             android:exported="false"
             android:foregroundServiceType="location" />
