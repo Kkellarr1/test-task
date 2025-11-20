@@ -61,8 +61,3 @@ app/src/main/java/com/example/testforwork/
 │   └── viewmodel/    # ViewModels
 ├── di/               # Dependency Injection
 └── service/          # Foreground Service
-
-## Лицензия
-
-MIT
-
